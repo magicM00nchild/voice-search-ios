@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -45,8 +45,8 @@
 		3C2C6E4929DBFEA7001C36A4 /* myTestsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myTestsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2C6E4D29DBFEA7001C36A4 /* myTestsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTestsUITests.swift; sourceTree = "<group>"; };
 		3C2C6E4F29DBFEA7001C36A4 /* myTestsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTestsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3C2C6E5D29DBFEB6001C36A4 /* SpeechTranscription */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SpeechTranscription; path = ../SpeechTranscription; sourceTree = "<group>"; };
 		3CC4558A29DC01A8007E1B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3CDF8AAB2CAAF0B500586F28 /* SpeechTranscription */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpeechTranscription; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +137,7 @@
 		3C2C6E5C29DBFEB6001C36A4 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				3C2C6E5D29DBFEB6001C36A4 /* SpeechTranscription */,
+				3CDF8AAB2CAAF0B500586F28 /* SpeechTranscription */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -240,6 +240,9 @@
 				Base,
 			);
 			mainGroup = 3C2C6E2629DBFEA4001C36A4;
+			packageReferences = (
+				3CDF8AAC2CAAF0D400586F28 /* XCLocalSwiftPackageReference "SpeechTranscription" */,
+			);
 			productRefGroup = 3C2C6E3029DBFEA4001C36A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -610,6 +613,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		3CDF8AAC2CAAF0D400586F28 /* XCLocalSwiftPackageReference "SpeechTranscription" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SpeechTranscription;
+		};
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		3C2C6E5F29DBFECD001C36A4 /* SpeechTranscription */ = {

@@ -10,25 +10,37 @@ import SpeechTranscription
 
 struct ContentView: View {
     @StateObject var transcript = SpeechTranscription()
-    
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Image(systemName: "graduationcap")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
-            Button( action: {
-                transcript.isRecording ? transcript.stop() : transcript.start()
-                print("is recording?: " + transcript.isRecording.description )
-                
-            }) {
-                Text(transcript.isRecording ? "Is Recording!" : "Start Recording by pressing!")
-            }
+                .font(.title)
+                //.padding(.top, 20)
+
+            Spacer()
+
             ScrollView {
                 VStack(alignment: .leading) {
                     Text(transcript.transcript)
+                        .padding()
                 }
             }
+            .frame(maxHeight: .infinity)
+
+            Button(action: {
+                transcript.isRecording ? transcript.stop() : transcript.start()
+            }) {
+                Text(transcript.isRecording ? "Stop Recording" : "Start Recording")
+                    .frame(width: 200, height: 50)
+                    .background(transcript.isRecording ? Color.red : Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .font(.headline)
+            }
+            .padding(.bottom, 20)
         }
         .padding()
     }
